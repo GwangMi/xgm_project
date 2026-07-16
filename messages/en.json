@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "title": "GwangMin Jeon | Service Planner Turning Data & AI into Decisions",
+    "description": "Portfolio of GwangMin Jeon, a service planner who builds information where none existed and connects it to real decisions."
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "publications": "Publications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "GwangMin Jeon",
+    "title": "Service Planner Turning Data & AI into Decisions",
+    "tagline": "I build information where none exists, and connect it to services that change how people decide and act.",
+    "cta": "Learn more",
+    "contactCta": "Get in touch"
+  },
+  "about": {
+    "heading": "About",
+    "intro": "I've grown beyond simply collecting data into someone who connects data to information and services people can actually use. Over two years and seven months as a national R&D researcher, I built data from scratch in areas where none existed, analyzed it, and turned it into information used for real decisions. I later expanded from data analysis into service planning and generative AI through graduate school in AI and the Microsoft AI School program.",
+    "highlights": [
+      {
+        "title": "Building the evidence for decisions where no data existed",
+        "body": "While working on a self-driving special transport vehicle project for people with disabilities, the pilot region had no related data at all. I ran field surveys to build baseline data, combined it with three years of usage data, and ran spatial analysis to visualize key mobility patterns — providing the evidence used to select pilot routes for autonomous driving. This taught me that the value of data isn't the analysis output itself, but building trustworthy information and connecting it to real decisions."
+      },
+      {
+        "title": "Planning services that reach users, not just analysis",
+        "body": "I realized that even great data and insights fail to create value if users can't easily act on them. In a team project, I defined budget management difficulty while traveling as the core problem and led the concept for a travel expense-tracking service, 'NOTO,' designing the full flow from data collection to storage, analysis, and visualization. I learned that service planning means understanding what information users need and using data to deliver it most effectively."
+      },
+      {
+        "title": "Designing better decisions with AI",
+        "body": "In the NOTO project, I used Azure Document Intelligence and GPT-4o Vision to automatically extract and structure receipt data, reducing manual input for users. In a school-zone child accident risk prediction project, I focused not just on predictive accuracy but on making results understandable and actionable through a Streamlit dashboard. I believe AI's role isn't the technology itself but making users' information discovery and decisions more efficient, and I continue to study advances in LLM technology."
+      }
+    ],
+    "closing": "Building on my experience of creating information where none existed and connecting it to real decisions, I want to grow into a planner who turns data into services that change how people judge and act."
+  },
+  "experience": [
+    {
+      "org": "Korea Association of Persons with Physical Disabilities · Institute for Living and Environment of Persons with Disabilities",
+      "role": "Researcher",
+      "period": "Jun 2023 – Dec 2025 (2 yrs 7 mo)",
+      "summary": "Led national R&D projects on transportation for people with disabilities, owning the full research process from data collection to analysis, visualization, and reporting.",
+      "projects": [
+        {
+          "title": "Autonomous Special Transport Vehicle for People with Disabilities",
+          "bullets": [
+            "Collected and cleaned field survey data and built it into a database",
+            "Derived mobility patterns of transportation-disadvantaged users through QGIS-based spatial analysis and visualization",
+            "Selected candidate pilot routes for autonomous driving based on the analysis"
+          ]
+        },
+        {
+          "title": "Standard Model for Regional Low-Floor Buses",
+          "bullets": [
+            "Researched operating technology for the low-floor seated bus standard model",
+            "Planned educational content by collecting, classifying, and comparing domestic and international research and indicators",
+            "Planned and ran a competition related to low-floor buses",
+            "Analyzed legislation and drafted amendments to mandate related training"
+          ]
+        }
+      ],
+      "footnote": "Produced research outcomes including academic paper publications and reports for participating research projects"
+    }
+  ],
+  "projects": [
+    {
+      "title": "AI-Based Travel Expense Tracker 'NOTO'",
+      "subtitle": "Microsoft AI School Team Project (2nd & Final) · Public launch planned H1 2027",
+      "tags": ["Azure Document Intelligence", "GPT-4o Vision", "Cosmos DB", "FastAPI", "Azure App Service"],
+      "bullets": [
+        "Proposed \"budget management difficulty while traveling\" as the shared problem and led planning of the core service concept (expense tracking app)",
+        "Built a receipt OCR parsing and structuring module using Azure Document Intelligence and GPT-4o Vision",
+        "Implemented Azure Cosmos DB integration with full CRUD data operations",
+        "Built a spend-analysis engine producing category spend ratios, budget-overrun alerts, and daily trends",
+        "Built a FastAPI-based REST API server (6 endpoints) and deployed to Azure App Service / Static Web Apps",
+        "Designed and ran the full extract → transform → load → analyze data pipeline as a team project"
+      ]
+    },
+    {
+      "title": "School-Zone Child Accident Risk Prediction Model",
+      "subtitle": "Microsoft AI School Team Project (1st)",
+      "tags": ["Python", "Logistic Regression", "SMOTE", "Streamlit", "Folium", "QGIS"],
+      "bullets": [
+        "Proposed the initial idea (an infrastructure-data-based child-friendly city diagnostic service); the team refined the direction into accident risk prediction",
+        "Built a prediction model combining safety facility and accident data from 142 school zones in Seongnam and Gwangmyeong with roughly 4,000 road-view images",
+        "Owned modeling and validation using Logistic Regression (L1/Lasso, SMOTE, OOF cross-validation)",
+        "Built a Streamlit/Folium dashboard to visualize results and a policy simulator to analyze the impact of adding facilities"
+      ]
+    }
+  ],
+  "skills": {
+    "heading": "Skills",
+    "categories": [
+      {
+        "name": "Data & AI",
+        "items": ["Python (Pandas, NumPy, Seaborn, scikit-learn)", "SQL", "Generative AI (LLM) prompt engineering"]
+      },
+      {
+        "name": "Machine Learning",
+        "items": ["Predictive modeling with Logistic Regression, SMOTE, cross-validation", "SHAP feature importance analysis"]
+      },
+      {
+        "name": "Cloud & Visualization",
+        "items": ["Microsoft Azure", "Streamlit", "Folium"]
+      },
+      {
+        "name": "Analysis Tools",
+        "items": ["QGIS spatial data analysis", "Statistical analysis and data visualization"]
+      },
+      {
+        "name": "Planning & Collaboration",
+        "items": ["Market and case-study benchmarking", "Content planning and operations", "Data-driven communication"]
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "items": [
+      {
+        "school": "Ajou University, Graduate School of Information & Communication, AI Major (M.S. in progress)",
+        "period": "Sep 2025 – Aug 2027 (in progress)"
+      },
+      {
+        "school": "Daegu University, Dept. of Vocational Rehabilitation (Minor: Law)",
+        "period": "Mar 2016 – Feb 2023 (graduated)"
+      }
+    ],
+    "coursesHeading": "Training",
+    "courses": [
+      {
+        "name": "Microsoft AI School, 9th Cohort",
+        "period": "Dec 2025 – Jun 2026 (completed)",
+        "bullets": [
+          "Completed courses in Python data analysis, data collection/preprocessing, and cloud-based machine learning & deep learning",
+          "Completed hands-on projects in Azure Machine Learning and Azure OpenAI",
+          "Planned and participated in the 1st, 2nd, and final team projects"
+        ]
+      },
+      {
+        "name": "Codeit, Python Data Analysis",
+        "period": "Mar 2025 – Apr 2025 (completed)",
+        "bullets": ["Completed a hands-on data analysis course using Pandas, NumPy, and Seaborn"]
+      }
+    ],
+    "certificationsHeading": "Certifications",
+    "certifications": [
+      "Certified Rehabilitation Counselor for the Disabled, Grade 1 (Ministry of Health and Welfare, Feb 2023)",
+      "Class 2 Regular Driver's License (Korean National Police Agency, Jan 2016)"
+    ]
+  },
+  "publications": {
+    "heading": "Publications",
+    "items": [
+      "Do, Y., Park, Y., Hong, H., & Jeon, K. (2025). A study on developing a disability awareness education program for low-floor bus drivers. Journal of Rehabilitation Welfare, 29(2), 1-36.",
+      "Do, Y., Hong, H., Park, Y., & Jeon, K. (2024). Analysis of call-taxi usage behavior among people with physical and brain lesion disabilities: Focusing on Hwaseong, Gyeonggi Province. Journal of Rehabilitation Welfare, 28(4), 189-209.",
+      "Do, Y., Hong, H., Park, J., & Jeon, K. (2024). Analysis of service needs of transportation-disadvantaged users for a mid-distance low-floor seated bus standard model. Journal of Rehabilitation Welfare, 28(2), 19-41.",
+      "Do, Y., Hong, H., Park, J., & Jeon, K. (2023). Developing user service evaluation indicators for autonomous-driving-based mobility for the transportation-disadvantaged: Through an expert panel Delphi survey. Journal of Rehabilitation Welfare, 27(4), 81-103."
+    ]
+  },
+  "contact": {
+    "heading": "Contact",
+    "body": "Always open to new opportunities and collaboration. Feel free to reach out.",
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "locationLabel": "Location",
+    "location": "Seoul, South Korea"
+  },
+  "footer": {
+    "rights": "GwangMin Jeon. All rights reserved."
+  }
+}
