@@ -22,7 +22,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative mx-auto flex min-h-[85vh] max-w-5xl flex-col justify-center overflow-hidden px-6 py-24"
+      className="relative mx-auto flex min-h-[85vh] max-w-5xl flex-col items-center justify-center overflow-hidden px-6 py-24 text-center"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 hidden dark:block">
         {EMBERS.map((ember, i) => (
@@ -68,7 +68,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="mt-6 max-w-xl text-base text-muted-foreground"
+        className="mt-6 max-w-xl whitespace-pre-line text-base text-muted-foreground"
       >
         {t("tagline")}
       </motion.p>

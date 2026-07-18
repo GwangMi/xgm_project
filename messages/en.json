@@ -145,21 +145,29 @@
         "name": "Codeit, Python Data Analysis",
         "period": "Mar 2025 – Apr 2025 (completed)",
         "bullets": ["Completed a hands-on data analysis course using Pandas, NumPy, and Seaborn"]
+      },
+      {
+        "name": "Google AI Professional Certificate (Coursera)",
+        "period": "Jul 2026 (completed)",
+        "bullets": [
+          "Completed 7 courses covering AI fundamentals and applying AI to brainstorming, research, writing, content creation, data analysis, and app building",
+          "Built a portfolio of 20+ AI-assisted artifacts and vibe-coded a custom AI solution"
+        ]
       }
     ],
     "certificationsHeading": "Certifications",
     "certifications": [
-      "Certified Rehabilitation Counselor for the Disabled, Grade 1 (Ministry of Health and Welfare, Feb 2023)",
+      "Certified Rehabilitation Counselor for People with Disabilities, Grade 1 (Ministry of Health and Welfare, Feb 2023)",
       "Class 2 Regular Driver's License (Korean National Police Agency, Jan 2016)"
     ]
   },
   "publications": {
     "heading": "Publications",
     "items": [
-      "Do, Y., Park, Y., Hong, H., & Jeon, K. (2025). A study on developing a disability awareness education program for low-floor bus drivers. Journal of Rehabilitation Welfare, 29(2), 1-36.",
-      "Do, Y., Hong, H., Park, Y., & Jeon, K. (2024). Analysis of call-taxi usage behavior among people with physical and brain lesion disabilities: Focusing on Hwaseong, Gyeonggi Province. Journal of Rehabilitation Welfare, 28(4), 189-209.",
-      "Do, Y., Hong, H., Park, J., & Jeon, K. (2024). Analysis of service needs of transportation-disadvantaged users for a mid-distance low-floor seated bus standard model. Journal of Rehabilitation Welfare, 28(2), 19-41.",
-      "Do, Y., Hong, H., Park, J., & Jeon, K. (2023). Developing user service evaluation indicators for autonomous-driving-based mobility for the transportation-disadvantaged: Through an expert panel Delphi survey. Journal of Rehabilitation Welfare, 27(4), 81-103."
+      "Yu Mi Do, Yong Won Park, HyunKeun Hong, & Gwang Min Jeon. (2025). A Study on the Development of a Disability Awareness Training Program for Low-Floor Bus Drivers. Journal of Rehabilitation Welfare, 29(2), 1-36.",
+      "Yu Mi Do, HyunKeun Hong, Yong Won Park, & Gwang Min Jeon. (2024). An Analysis of Utilization Patterns of the Disabled Call Taxis Among Individuals with Physical and Brain Lesion Disorder: Focusing on Hwaseong City, Gyeonggi-do. Journal of Rehabilitation Welfare, 28(4), 189-209. http://dx.doi.org/10.16884/JRR.2024.28.4.189",
+      "Yu Mi Do, HyunKeun Hong, Jong Hyun Park, & Gwang Min Jeon. (2024). Analysis of Service Needs What the Transportation Vulnerable Want for Inventing the Standard Model of Mid-Distance Low-Floor Seat Buses. Journal of Rehabilitation Welfare, 28(2), 19-41. http://dx.doi.org/10.16884/JRR.2024.28.2.19",
+      "Yu Mi Do, HyunKeun Hong, Jong Hyun Park, & Gwang Min Jeon. (2023). Development of Based on Autonomous Driving User Service Evaluation Indicators for the Transportation Vulnerable: Through Expert Panel Delphi Survey. Journal of Rehabilitation Welfare, 27(4), 81-103."
     ]
   },
   "contact": {

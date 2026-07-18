@@ -43,3 +43,6 @@ next-env.d.ts
 # personal source documents (contain private contact info)
 *.docx
 *.hwpx
+
+.vercel
+.env*
