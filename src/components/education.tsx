@@ -1,8 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { AnimatedSection, AnimatedItem } from "@/components/animated-section";
 import { SectionHeading } from "@/components/section-heading";
+import {
+  CertificateModal,
+  type CertificateInfo,
+} from "@/components/certificate-modal";
 
 type EduItem = { school: string; period: string };
 type Course = {
@@ -20,8 +25,11 @@ export function Education() {
     .slice()
     .sort((a, b) => b.sortDate.localeCompare(a.sortDate));
   const certifications = t.raw("certifications") as string[];
+  const [openCertificate, setOpenCertificate] =
+    useState<CertificateInfo | null>(null);
 
   return (
+    <>
     <AnimatedSection id="education" className="mx-auto max-w-5xl px-6 py-20">
       <SectionHeading eyebrow="Education" title={t("heading")} />
 
@@ -67,15 +75,19 @@ export function Education() {
                 </li>
               ))}
             </ul>
-            <a
-              href={course.certificateFile}
-              target="_blank"
-              rel="noreferrer noopener"
+            <button
+              type="button"
+              onClick={() =>
+                setOpenCertificate({
+                  title: course.name,
+                  image: course.certificateFile,
+                })
+              }
               className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-accent hover:underline"
             >
               {t("certificateLabel")}
               <span aria-hidden>↗</span>
-            </a>
+            </button>
           </AnimatedItem>
         ))}
       </div>
@@ -91,5 +103,10 @@ export function Education() {
         ))}
       </ul>
     </AnimatedSection>
+    <CertificateModal
+      certificate={openCertificate}
+      onClose={() => setOpenCertificate(null)}
+    />
+    </>
   );
 }

@@ -9,10 +9,10 @@ export function Header() {
 
   const links: { href: string; label: string }[] = [
     { href: "#about", label: t("about") },
-    { href: "#experience", label: t("experience") },
-    { href: "#projects", label: t("projects") },
     { href: "#skills", label: t("skills") },
     { href: "#education", label: t("education") },
+    { href: "#experience", label: t("experience") },
+    { href: "#projects", label: t("projects") },
     { href: "#publications", label: t("publications") },
     { href: "#contact", label: t("contact") },
   ];

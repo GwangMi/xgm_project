@@ -137,7 +137,7 @@
         "name": "Google AI 전문 자격증 (Coursera)",
         "period": "2026.07 (수료)",
         "sortDate": "2026-07-18",
-        "certificateFile": "/certificates/google-ai-professional-certificate.pdf",
+        "certificateFile": "/certificates/google-ai-professional-certificate.jpg",
         "bullets": [
           "AI 기초, 브레인스토밍·리서치·글쓰기·콘텐츠 제작·데이터 분석·앱 빌딩 등 AI 활용 전 과정을 다루는 7개 과정 이수",
           "AI를 활용한 20개 이상의 산출물로 포트폴리오를 구성하고, 바이브 코딩으로 커스텀 AI 솔루션 제작"
@@ -158,7 +158,7 @@
         "name": "코드잇 파이썬 데이터 분석",
         "period": "2025.03 – 2025.04 (수료)",
         "sortDate": "2025-04-30",
-        "certificateFile": "/certificates/codeit-data-analysis.pdf",
+        "certificateFile": "/certificates/codeit-data-analysis.jpg",
         "bullets": ["Pandas, NumPy, Seaborn 활용 실무 데이터 분석과정 이수"]
       }
     ],
