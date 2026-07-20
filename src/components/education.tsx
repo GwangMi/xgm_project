@@ -5,12 +5,20 @@ import { AnimatedSection, AnimatedItem } from "@/components/animated-section";
 import { SectionHeading } from "@/components/section-heading";
 
 type EduItem = { school: string; period: string };
-type Course = { name: string; period: string; bullets: string[] };
+type Course = {
+  name: string;
+  period: string;
+  sortDate: string;
+  certificateFile: string;
+  bullets: string[];
+};
 
 export function Education() {
   const t = useTranslations("education");
   const items = t.raw("items") as EduItem[];
-  const courses = t.raw("courses") as Course[];
+  const courses = (t.raw("courses") as Course[])
+    .slice()
+    .sort((a, b) => b.sortDate.localeCompare(a.sortDate));
   const certifications = t.raw("certifications") as string[];
 
   return (
@@ -59,6 +67,15 @@ export function Education() {
                 </li>
               ))}
             </ul>
+            <a
+              href={course.certificateFile}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-accent hover:underline"
+            >
+              {t("certificateLabel")}
+              <span aria-hidden>↗</span>
+            </a>
           </AnimatedItem>
         ))}
       </div>

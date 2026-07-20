@@ -131,10 +131,23 @@
       }
     ],
     "coursesHeading": "Training",
+    "certificateLabel": "View certificate",
     "courses": [
+      {
+        "name": "Google AI Professional Certificate (Coursera)",
+        "period": "Jul 2026 (completed)",
+        "sortDate": "2026-07-18",
+        "certificateFile": "/certificates/google-ai-professional-certificate.pdf",
+        "bullets": [
+          "Completed 7 courses covering AI fundamentals and applying AI to brainstorming, research, writing, content creation, data analysis, and app building",
+          "Built a portfolio of 20+ AI-assisted artifacts and vibe-coded a custom AI solution"
+        ]
+      },
       {
         "name": "Microsoft AI School, 9th Cohort",
         "period": "Dec 2025 – Jun 2026 (completed)",
+        "sortDate": "2026-06-25",
+        "certificateFile": "/certificates/microsoft-ai-school.jpg",
         "bullets": [
           "Completed courses in Python data analysis, data collection/preprocessing, and cloud-based machine learning & deep learning",
           "Completed hands-on projects in Azure Machine Learning and Azure OpenAI",
@@ -144,15 +157,9 @@
       {
         "name": "Codeit, Python Data Analysis",
         "period": "Mar 2025 – Apr 2025 (completed)",
+        "sortDate": "2025-04-30",
+        "certificateFile": "/certificates/codeit-data-analysis.pdf",
         "bullets": ["Completed a hands-on data analysis course using Pandas, NumPy, and Seaborn"]
-      },
-      {
-        "name": "Google AI Professional Certificate (Coursera)",
-        "period": "Jul 2026 (completed)",
-        "bullets": [
-          "Completed 7 courses covering AI fundamentals and applying AI to brainstorming, research, writing, content creation, data analysis, and app building",
-          "Built a portfolio of 20+ AI-assisted artifacts and vibe-coded a custom AI solution"
-        ]
       }
     ],
     "certificationsHeading": "Certifications",

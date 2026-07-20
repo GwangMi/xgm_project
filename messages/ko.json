@@ -131,10 +131,23 @@
       }
     ],
     "coursesHeading": "교육이수",
+    "certificateLabel": "수료증 보기",
     "courses": [
+      {
+        "name": "Google AI 전문 자격증 (Coursera)",
+        "period": "2026.07 (수료)",
+        "sortDate": "2026-07-18",
+        "certificateFile": "/certificates/google-ai-professional-certificate.pdf",
+        "bullets": [
+          "AI 기초, 브레인스토밍·리서치·글쓰기·콘텐츠 제작·데이터 분석·앱 빌딩 등 AI 활용 전 과정을 다루는 7개 과정 이수",
+          "AI를 활용한 20개 이상의 산출물로 포트폴리오를 구성하고, 바이브 코딩으로 커스텀 AI 솔루션 제작"
+        ]
+      },
       {
         "name": "Microsoft AI School 9기",
         "period": "2025.12 – 2026.06 (수료)",
+        "sortDate": "2026-06-25",
+        "certificateFile": "/certificates/microsoft-ai-school.jpg",
         "bullets": [
           "Python 데이터 분석, 데이터 수집·전처리, 클라우드 기반 머신러닝·딥러닝 과정 이수",
           "Azure 머신러닝 및 Azure OpenAI 실습 프로젝트 수행",
@@ -144,15 +157,9 @@
       {
         "name": "코드잇 파이썬 데이터 분석",
         "period": "2025.03 – 2025.04 (수료)",
+        "sortDate": "2025-04-30",
+        "certificateFile": "/certificates/codeit-data-analysis.pdf",
         "bullets": ["Pandas, NumPy, Seaborn 활용 실무 데이터 분석과정 이수"]
-      },
-      {
-        "name": "Google AI 전문 자격증 (Coursera)",
-        "period": "2026.07 (수료)",
-        "bullets": [
-          "AI 기초, 브레인스토밍·리서치·글쓰기·콘텐츠 제작·데이터 분석·앱 빌딩 등 AI 활용 전 과정을 다루는 7개 과정 이수",
-          "AI를 활용한 20개 이상의 산출물로 포트폴리오를 구성하고, 바이브 코딩으로 커스텀 AI 솔루션 제작"
-        ]
       }
     ],
     "certificationsHeading": "자격증",
