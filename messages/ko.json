@@ -98,11 +98,7 @@
     "categories": [
       {
         "name": "데이터 · AI",
-        "items": ["Python (Pandas, NumPy, Seaborn, scikit-learn)", "SQL", "생성형 AI(LLM) 프롬프트 엔지니어링"]
-      },
-      {
-        "name": "머신러닝",
-        "items": ["Logistic Regression · SMOTE · 교차검증 기반 예측 모델링", "SHAP 변수 중요도 분석"]
+        "items": ["Python", "SQL", "생성형 AI(LLM) 프롬프트 엔지니어링", "MLOps"]
       },
       {
         "name": "클라우드 · 시각화",
@@ -110,7 +106,7 @@
       },
       {
         "name": "분석 도구",
-        "items": ["QGIS 공간데이터 분석", "통계분석 및 데이터 시각화"]
+        "items": ["QGIS", "Google Analytics", "Power BI", "통계분석 및 데이터 시각화"]
       },
       {
         "name": "기획 · 협업",

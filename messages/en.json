@@ -98,11 +98,7 @@
     "categories": [
       {
         "name": "Data & AI",
-        "items": ["Python (Pandas, NumPy, Seaborn, scikit-learn)", "SQL", "Generative AI (LLM) prompt engineering"]
-      },
-      {
-        "name": "Machine Learning",
-        "items": ["Predictive modeling with Logistic Regression, SMOTE, cross-validation", "SHAP feature importance analysis"]
+        "items": ["Python", "SQL", "Generative AI (LLM) prompt engineering", "MLOps"]
       },
       {
         "name": "Cloud & Visualization",
@@ -110,7 +106,7 @@
       },
       {
         "name": "Analysis Tools",
-        "items": ["QGIS spatial data analysis", "Statistical analysis and data visualization"]
+        "items": ["QGIS", "Google Analytics", "Power BI", "Statistical analysis and data visualization"]
       },
       {
         "name": "Planning & Collaboration",
