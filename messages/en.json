@@ -14,11 +14,17 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "GwangMin Jeon",
-    "title": "Service Planner Turning Data & AI into Decisions",
+    "name": "And a curious 'Human API' — GwangMin Jeon.",
+    "title": "Coding writer, writing engineer.",
+    "role": "",
     "tagline": "I build information where none exists, and connect it to services that change how people decide and act.",
     "cta": "Learn more",
     "contactCta": "Get in touch"
+  },
+  "profile": {
+    "tag": "HUMAN API",
+    "lead": "Someone who finds joy in the process, not just the goal",
+    "body": "When problems come up, I stay calm and look for a way forward instead of panicking. I take deadlines seriously once we've agreed on them, and I'm never afraid to ask when I don't know something — learning is part of the job. Making a positive impact, on the team and beyond, is what motivates me most."
   },
   "about": {
     "heading": "About",
@@ -41,7 +47,7 @@
   },
   "experience": [
     {
-      "org": "Korea Association of Persons with Physical Disabilities · Institute for Living and Environment of Persons with Disabilities",
+      "org": "Korea Association of Persons with Physical Disabilities (KAPPD) · Institute for Living and Environment of Persons with Disabilities",
       "role": "Researcher",
       "period": "Jun 2023 – Dec 2025 (2 yrs 7 mo)",
       "summary": "Led national R&D projects on transportation for people with disabilities, owning the full research process from data collection to analysis, visualization, and reporting.",
@@ -90,6 +96,27 @@
         "Built a prediction model combining safety facility and accident data from 142 school zones in Seongnam and Gwangmyeong with roughly 4,000 road-view images",
         "Owned modeling and validation using Logistic Regression (L1/Lasso, SMOTE, OOF cross-validation)",
         "Built a Streamlit/Folium dashboard to visualize results and a policy simulator to analyze the impact of adding facilities"
+      ]
+    },
+    {
+      "title": "Autonomous Special Transport Vehicle for People with Disabilities",
+      "subtitle": "KAPPD · National R&D Project · Jun 2023 – Dec 2025",
+      "tags": ["QGIS", "Spatial Data Analysis", "Field Research", "Policy Research"],
+      "bullets": [
+        "Collected and cleaned field survey data and built it into a database",
+        "Derived mobility patterns of transportation-disadvantaged users through QGIS-based spatial analysis and visualization",
+        "Selected candidate pilot routes for autonomous driving based on the analysis"
+      ]
+    },
+    {
+      "title": "Standard Model for Regional Low-Floor Buses",
+      "subtitle": "KAPPD · National R&D Project · Jun 2023 – Dec 2025",
+      "tags": ["Policy Research", "Benchmarking", "Legislative Analysis", "Content Planning"],
+      "bullets": [
+        "Researched operating technology for the low-floor seated bus standard model",
+        "Planned educational content by collecting, classifying, and comparing domestic and international research and indicators",
+        "Planned and ran a competition related to low-floor buses",
+        "Analyzed legislation and drafted amendments to mandate related training"
       ]
     }
   ],

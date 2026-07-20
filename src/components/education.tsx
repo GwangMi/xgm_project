@@ -30,83 +30,83 @@ export function Education() {
 
   return (
     <>
-    <AnimatedSection id="education" className="mx-auto max-w-5xl px-6 py-20">
-      <SectionHeading eyebrow="Education" title={t("heading")} />
+      <AnimatedSection
+        id="education"
+        className="mx-auto max-w-6xl px-6 py-24 sm:py-28"
+      >
+        <SectionHeading eyebrow="Education" title={t("heading")} />
 
-      <div className="space-y-4">
-        {items.map((item) => (
-          <AnimatedItem
-            key={item.school}
-            tilt
-            className="flex flex-col justify-between gap-1 rounded-2xl border border-border bg-card p-6 transition-colors hover:border-accent/60 sm:flex-row sm:items-center"
-          >
-            <h3 className="font-display text-base font-medium">{item.school}</h3>
-            <span className="text-sm text-muted-foreground">
-              {item.period}
-            </span>
-          </AnimatedItem>
-        ))}
-      </div>
-
-      <h3 className="mt-12 mb-4 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-        {t("coursesHeading")}
-      </h3>
-      <div className="grid gap-6 sm:grid-cols-2">
-        {courses.map((course, i) => (
-          <AnimatedItem
-            key={course.name}
-            delay={i * 0.1}
-            tilt
-            className="rounded-2xl border border-border bg-card p-6 transition-colors hover:border-accent/60"
-          >
-            <div className="flex items-baseline justify-between gap-2">
-              <h4 className="font-display text-sm font-semibold">{course.name}</h4>
-              <span className="shrink-0 text-xs text-muted-foreground">
-                {course.period}
-              </span>
-            </div>
-            <ul className="mt-3 space-y-1.5">
-              {course.bullets.map((bullet) => (
-                <li
-                  key={bullet}
-                  className="text-sm leading-relaxed text-muted-foreground"
-                >
-                  {bullet}
-                </li>
-              ))}
-            </ul>
-            <button
-              type="button"
-              onClick={() =>
-                setOpenCertificate({
-                  title: course.name,
-                  image: course.certificateFile,
-                })
-              }
-              className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-accent hover:underline"
+        <div className="space-y-4">
+          {items.map((item) => (
+            <AnimatedItem
+              key={item.school}
+              className="flex flex-col justify-between gap-1 border-2 border-ink bg-card p-6 sm:flex-row sm:items-center"
             >
-              {t("certificateLabel")}
-              <span aria-hidden>↗</span>
-            </button>
-          </AnimatedItem>
-        ))}
-      </div>
+              <h3 className="font-display text-lg text-ink">{item.school}</h3>
+              <span className="text-sm font-bold text-muted">
+                {item.period}
+              </span>
+            </AnimatedItem>
+          ))}
+        </div>
 
-      <h3 className="mt-12 mb-4 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-        {t("certificationsHeading")}
-      </h3>
-      <ul className="space-y-2">
-        {certifications.map((cert) => (
-          <li key={cert} className="text-sm text-muted-foreground">
-            {cert}
-          </li>
-        ))}
-      </ul>
-    </AnimatedSection>
-    <CertificateModal
-      certificate={openCertificate}
-      onClose={() => setOpenCertificate(null)}
-    />
+        <h3 className="mt-14 mb-4 text-sm font-bold tracking-wide text-coral uppercase">
+          {t("coursesHeading")}
+        </h3>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {courses.map((course, i) => (
+            <AnimatedItem
+              key={course.name}
+              delay={i * 0.1}
+              className="border-2 border-ink bg-card p-6 brutal-shadow-sm transition-transform hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+            >
+              <div className="flex items-baseline justify-between gap-2">
+                <h4 className="font-display text-base text-ink">
+                  {course.name}
+                </h4>
+                <span className="shrink-0 text-xs font-bold text-muted">
+                  {course.period}
+                </span>
+              </div>
+              <ul className="mt-3 space-y-1.5">
+                {course.bullets.map((bullet) => (
+                  <li key={bullet} className="text-sm leading-relaxed text-muted">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+              <button
+                type="button"
+                onClick={() =>
+                  setOpenCertificate({
+                    title: course.name,
+                    image: course.certificateFile,
+                  })
+                }
+                className="mt-4 inline-flex items-center gap-1 border-2 border-ink px-3 py-1.5 text-xs font-bold text-ink hover:bg-ink hover:text-paper"
+              >
+                {t("certificateLabel")}
+                <span aria-hidden>↗</span>
+              </button>
+            </AnimatedItem>
+          ))}
+        </div>
+
+        <h3 className="mt-14 mb-4 text-sm font-bold tracking-wide text-coral uppercase">
+          {t("certificationsHeading")}
+        </h3>
+        <ul className="space-y-2">
+          {certifications.map((cert) => (
+            <li key={cert} className="text-sm font-bold text-ink">
+              {cert}
+            </li>
+          ))}
+        </ul>
+      </AnimatedSection>
+      <CertificateModal
+        certificate={openCertificate}
+        onClose={() => setOpenCertificate(null)}
+      />
     </>
   );
 }

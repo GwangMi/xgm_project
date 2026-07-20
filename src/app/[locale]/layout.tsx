@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cinzel, Nanum_Myeongjo } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Anton,
+  Black_Han_Sans,
+  Dancing_Script,
+  Nanum_Pen_Script,
+} from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { ThemeProvider } from "@/components/theme-provider";
-import { AmbientBackground } from "@/components/ambient-background";
 import { routing } from "@/i18n/routing";
+import { CursorTrail } from "@/components/cursor-trail";
+import { ClickBurst } from "@/components/click-burst";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -19,16 +26,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
+const anton = Anton({
+  variable: "--font-anton",
   subsets: ["latin"],
-  weight: ["400", "600", "900"],
+  weight: ["400"],
 });
 
-const nanumMyeongjo = Nanum_Myeongjo({
-  variable: "--font-nanum-myeongjo",
+const blackHanSans = Black_Han_Sans({
+  variable: "--font-black-han-sans",
   subsets: ["latin"],
-  weight: ["400", "700", "800"],
+  weight: ["400"],
+});
+
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing-script",
+  subsets: ["latin"],
+  weight: ["700"],
+});
+
+const nanumPenScript = Nanum_Pen_Script({
+  variable: "--font-nanum-pen",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export function generateStaticParams() {
@@ -59,21 +78,14 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${cinzel.variable} ${nanumMyeongjo.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${anton.variable} ${blackHanSans.variable} ${dancingScript.variable} ${nanumPenScript.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            <AmbientBackground />
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
+      <body className="min-h-full flex flex-col bg-paper text-ink">
+        <NextIntlClientProvider messages={messages}>
+          <CursorTrail />
+          <ClickBurst />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

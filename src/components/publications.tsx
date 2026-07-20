@@ -11,28 +11,23 @@ export function Publications() {
   return (
     <AnimatedSection
       id="publications"
-      className="bg-muted/50 px-6 py-20"
+      className="mx-auto max-w-6xl px-6 py-24 sm:py-28"
     >
-      <div className="mx-auto max-w-5xl">
-        <SectionHeading eyebrow="Research" title={t("heading")} />
-        <ol className="space-y-4">
-          {items.map((item, i) => (
-            <AnimatedItem
-              key={item}
-              delay={i * 0.06}
-              tilt
-              className="flex gap-4 rounded-2xl border border-border bg-card p-5 transition-colors hover:border-accent/60"
-            >
-              <span className="font-display text-sm font-semibold text-accent">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {item}
-              </p>
-            </AnimatedItem>
-          ))}
-        </ol>
-      </div>
+      <SectionHeading eyebrow="Research" title={t("heading")} />
+      <ol className="space-y-4">
+        {items.map((item, i) => (
+          <AnimatedItem
+            key={item}
+            delay={i * 0.06}
+            className="flex gap-4 border-2 border-ink bg-card p-5"
+          >
+            <span className="font-display shrink-0 text-lg text-coral">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <p className="text-sm leading-relaxed text-ink">{item}</p>
+          </AnimatedItem>
+        ))}
+      </ol>
     </AnimatedSection>
   );
 }

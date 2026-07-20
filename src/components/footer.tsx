@@ -7,8 +7,8 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border px-6 py-8">
-      <p className="mx-auto max-w-5xl text-center text-xs text-muted-foreground">
+    <footer className="border-t-2 border-ink bg-ink px-6 py-8 text-paper">
+      <p className="mx-auto max-w-6xl text-center text-xs font-bold">
         © {year} {t("rights")}
       </p>
     </footer>

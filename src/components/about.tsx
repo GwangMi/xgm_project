@@ -13,10 +13,10 @@ export function About() {
   return (
     <AnimatedSection
       id="about"
-      className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-20"
+      className="mx-auto max-w-6xl px-6 py-24 sm:py-28"
     >
       <SectionHeading eyebrow="About" title={t("heading")} />
-      <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+      <p className="text-base leading-relaxed text-ink sm:text-lg">
         {t("intro")}
       </p>
       <div className="mt-12 grid gap-6 sm:grid-cols-3">
@@ -24,19 +24,18 @@ export function About() {
           <AnimatedItem
             key={item.title}
             delay={i * 0.1}
-            tilt
-            className="rounded-2xl border border-border bg-card p-6 transition-colors hover:border-accent/60"
+            className="border-2 border-ink bg-card p-6 brutal-shadow-sm transition-transform hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
           >
-            <h3 className="font-display whitespace-pre-line text-base font-semibold">
+            <h3 className="font-display whitespace-pre-line text-lg text-ink">
               {item.title}
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-3 text-sm leading-relaxed text-muted">
               {item.body}
             </p>
           </AnimatedItem>
         ))}
       </div>
-      <p className="mt-12 border-l-2 border-accent pl-5 text-base italic leading-relaxed text-foreground">
+      <p className="mt-12 border-l-4 border-coral bg-card p-6 text-base leading-relaxed font-bold text-ink">
         {t("closing")}
       </p>
     </AnimatedSection>
