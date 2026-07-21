@@ -15,7 +15,7 @@ export function About() {
       id="about"
       className="mx-auto max-w-6xl px-6 py-24 sm:py-28"
     >
-      <SectionHeading eyebrow="About" title={t("heading")} />
+      <SectionHeading eyebrow="HOW I WORK" title={t("heading")} />
       <p className="text-base leading-relaxed text-ink sm:text-lg">
         {t("intro")}
       </p>

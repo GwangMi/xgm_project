@@ -31,20 +31,20 @@
     }
   },
   "about": {
-    "heading": "About",
-    "intro": "I've grown from someone who simply collects data into someone who turns it into information and services people can actually use. Over two years and seven months as a national R&D researcher, I built data from scratch in places where none existed, analyzed it, and turned it into information that shaped real decisions. I later expanded beyond data analysis into service planning and generative AI, through graduate school and the Microsoft AI School program.",
+    "heading": "How I Solve Problems",
+    "intro": "I break working with data into three steps: build it when it doesn't exist, keep the person who'll use it in mind while building it, and push the result all the way through to a form that actually reaches them. That's been my approach for two years and seven months as a national R&D researcher, and through my AI graduate studies and Microsoft AI School.",
     "highlights": [
       {
-        "title": "Building the evidence for decisions where no data existed",
-        "body": "While working on a self-driving special transport vehicle project for people with disabilities, the pilot region had no related data at all. I ran field surveys to build baseline data, combined it with three years of usage data, and ran spatial analysis to visualize key mobility patterns — providing the evidence used to select pilot routes for autonomous driving. This taught me that the value of data isn't the analysis output itself, but building trustworthy information and connecting it to real decisions."
+        "title": "Build it myself when it's missing",
+        "body": "I don't treat missing data as a reason I can't start. When I worked on the autonomous driving research, the pilot region had no related data at all, so I built baseline data through direct field surveys, combined it with three years of usage data, and ran spatial analysis. That became the evidence used to select the pilot routes."
       },
       {
-        "title": "Planning services that reach users, not just analysis",
-        "body": "I realized that even great data and insights fail to create value if users can't easily act on them. In a team project, I defined budget management difficulty while traveling as the core problem and led the concept for a travel expense-tracking service, 'NOTO,' designing the full flow from data collection to storage, analysis, and visualization. I learned that service planning means understanding what information users need and using data to deliver it most effectively."
+        "title": "Always think of the person first",
+        "body": "Behind every number, there's someone actually living it. For the low-floor bus standard model research, I surveyed roughly 5,000 users directly about their service needs, and the data showed that low usage came from a lack of infrastructure, not a lack of demand. That finding led to the decision to keep the number of wheelchair-accessible seats unchanged."
       },
       {
-        "title": "Designing better decisions with AI",
-        "body": "In the NOTO project, I used Azure Document Intelligence and GPT-4o Vision to automatically extract and structure receipt data, reducing manual input for users. In a school-zone child accident risk prediction project, I focused not just on predictive accuracy but on making results understandable and actionable through a Streamlit dashboard. I believe AI's role isn't the technology itself but making users' information discovery and decisions more efficient, and I continue to study advances in LLM technology."
+        "title": "Turn it into something people can use",
+        "body": "Even good insight struggles to create value if it's hard to use. That's why I turned prediction models into dashboards and policy simulators, and receipt data into an automatic structuring feature. I care as much about how well something is delivered as about how accurate it is."
       }
     ],
     "closing": "Drawing on this experience of creating information where none existed and turning it into real decisions, I want to grow into a planner who builds data into services that change how people judge and act."
