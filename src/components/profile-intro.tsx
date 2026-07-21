@@ -10,9 +10,21 @@ export function ProfileIntro() {
   const locale = useLocale();
 
   const links = [
-    { icon: <IconMail />, label: t("links.email"), href: `mailto:${EMAIL}` },
-    { icon: <IconGithub />, label: "GitHub", href: GITHUB_URL, external: true },
-    { icon: <IconLinkedin />, label: "LinkedIn", href: LINKEDIN_URL, external: true },
+    { icon: <IconMail />, label: t("links.email"), value: EMAIL, href: `mailto:${EMAIL}` },
+    {
+      icon: <IconGithub />,
+      label: "GitHub",
+      value: "github.com/GwangMi",
+      href: GITHUB_URL,
+      external: true,
+    },
+    {
+      icon: <IconLinkedin />,
+      label: "LinkedIn",
+      value: "linkedin.com/in/gm97",
+      href: LINKEDIN_URL,
+      external: true,
+    },
     {
       icon: <IconDownload />,
       label: t("links.resume"),
@@ -23,7 +35,7 @@ export function ProfileIntro() {
 
   return (
     <AnimatedSection className="mx-auto max-w-6xl px-6 py-20">
-      <AnimatedItem className="flex flex-col items-start gap-8 sm:flex-row sm:items-center">
+      <AnimatedItem className="flex flex-col items-center gap-8 sm:flex-row sm:justify-center">
         <div className="relative shrink-0">
           <div className="brutal-shadow size-40 overflow-hidden border-2 border-ink sm:size-48">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -45,10 +57,13 @@ export function ProfileIntro() {
               target={link.external ? "_blank" : undefined}
               rel={link.external ? "noreferrer noopener" : undefined}
               download={link.download || undefined}
-              className="brutal-shadow-sm flex items-center gap-3 border-2 border-ink bg-ink px-5 py-2.5 text-sm font-bold tracking-wide text-paper uppercase transition-colors hover:bg-teal hover:text-ink"
+              className="brutal-shadow-sm flex items-center gap-3 border-2 border-ink bg-ink px-5 py-2.5 text-sm text-paper transition-colors hover:bg-teal hover:text-ink"
             >
               {link.icon}
-              {link.label}
+              <span>
+                <span className="font-bold">{link.label}</span>
+                {link.value && <span className="ml-2 opacity-70">{link.value}</span>}
+              </span>
             </a>
           ))}
         </div>

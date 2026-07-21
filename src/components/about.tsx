@@ -35,9 +35,6 @@ export function About() {
           </AnimatedItem>
         ))}
       </div>
-      <p className="mt-12 border-l-4 border-coral bg-card p-6 text-base leading-relaxed font-bold text-ink">
-        {t("closing")}
-      </p>
     </AnimatedSection>
   );
 }
