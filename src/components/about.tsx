@@ -12,7 +12,7 @@ export function About() {
 
   return (
     <AnimatedSection
-      id="about"
+      id="how-i-work"
       className="mx-auto max-w-6xl px-6 py-24 sm:py-28"
     >
       <SectionHeading eyebrow="HOW I WORK" title={t("heading")} />

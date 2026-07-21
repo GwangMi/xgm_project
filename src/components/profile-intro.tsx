@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { AnimatedSection, AnimatedItem } from "@/components/animated-section";
+import { SectionHeading } from "@/components/section-heading";
 import { IconMail, IconGithub, IconLinkedin, IconDownload } from "@/components/icons";
 import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/contact-info";
 
@@ -34,7 +35,8 @@ export function ProfileIntro() {
   ];
 
   return (
-    <AnimatedSection className="mx-auto max-w-6xl px-6 py-20">
+    <AnimatedSection id="about" className="mx-auto max-w-6xl px-6 py-20">
+      <SectionHeading eyebrow="About" title={t("heading")} />
       <AnimatedItem className="flex flex-col items-center gap-8 sm:flex-row sm:justify-center">
         <div className="relative shrink-0">
           <div className="brutal-shadow size-40 overflow-hidden border-2 border-ink sm:size-48">
