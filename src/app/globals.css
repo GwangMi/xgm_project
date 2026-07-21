@@ -94,33 +94,33 @@ body {
 @keyframes pacman-chomp {
   from {
     -webkit-mask-image: conic-gradient(
-      from 80deg,
+      from 70deg,
       transparent 0deg,
-      transparent 20deg,
-      black 20deg,
+      transparent 40deg,
+      black 40deg,
       black 360deg
     );
     mask-image: conic-gradient(
-      from 80deg,
+      from 70deg,
       transparent 0deg,
-      transparent 20deg,
-      black 20deg,
+      transparent 40deg,
+      black 40deg,
       black 360deg
     );
   }
   to {
     -webkit-mask-image: conic-gradient(
-      from 50deg,
+      from 30deg,
       transparent 0deg,
-      transparent 80deg,
-      black 80deg,
+      transparent 120deg,
+      black 120deg,
       black 360deg
     );
     mask-image: conic-gradient(
-      from 50deg,
+      from 30deg,
       transparent 0deg,
-      transparent 80deg,
-      black 80deg,
+      transparent 120deg,
+      black 120deg,
       black 360deg
     );
   }
@@ -130,17 +130,17 @@ body {
   .pacman {
     animation: none;
     -webkit-mask-image: conic-gradient(
-      from 70deg,
+      from 45deg,
       transparent 0deg,
-      transparent 40deg,
-      black 40deg,
+      transparent 90deg,
+      black 90deg,
       black 360deg
     );
     mask-image: conic-gradient(
-      from 70deg,
+      from 45deg,
       transparent 0deg,
-      transparent 40deg,
-      black 40deg,
+      transparent 90deg,
+      black 90deg,
       black 360deg
     );
   }

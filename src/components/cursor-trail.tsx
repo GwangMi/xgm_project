@@ -1,7 +1,9 @@
 "use client";
 
 import {
+  AnimatePresence,
   motion,
+  useAnimationFrame,
   useMotionValue,
   useSpring,
   useTransform,
@@ -9,8 +11,23 @@ import {
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+type Burst = {
+  id: number;
+  x: number;
+  y: number;
+  pieces: { dx: number; dy: number; rotate: number }[];
+};
+
+const EAT_DISTANCE = 12;
+
 export function CursorTrail() {
   const [active, setActive] = useState(false);
+  const [dotHidden, setDotHidden] = useState(false);
+  const [bursts, setBursts] = useState<Burst[]>([]);
+  const burstCounter = useRef(0);
+  const wasFar = useRef(false);
+  const waitingForMove = useRef(false);
+
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
   const springX = useSpring(x, { damping: 25, stiffness: 300, mass: 0.4 });
@@ -30,6 +47,37 @@ export function CursorTrail() {
     return lastAngle.current;
   });
 
+  useAnimationFrame(() => {
+    const dist = Math.hypot(trailX.get() - springX.get(), trailY.get() - springY.get());
+
+    if (dist >= EAT_DISTANCE) {
+      wasFar.current = true;
+      return;
+    }
+    if (!wasFar.current) return;
+
+    wasFar.current = false;
+    const id = burstCounter.current++;
+    const originX = springX.get();
+    const originY = springY.get();
+    const pieces = Array.from({ length: 8 }, (_, i) => {
+      const angle = (Math.PI * 2 * i) / 8 + Math.random() * 0.4;
+      const pieceDistance = 18 + Math.random() * 20;
+      return {
+        dx: Math.cos(angle) * pieceDistance,
+        dy: Math.sin(angle) * pieceDistance,
+        rotate: Math.random() * 180 - 90,
+      };
+    });
+    setBursts((prev) => [...prev, { id, x: originX, y: originY, pieces }]);
+    window.setTimeout(() => {
+      setBursts((prev) => prev.filter((b) => b.id !== id));
+    }, 550);
+
+    setDotHidden(true);
+    waitingForMove.current = true;
+  });
+
   useEffect(() => {
     const isFine = window.matchMedia("(pointer: fine)").matches;
     if (!isFine) return;
@@ -38,6 +86,10 @@ export function CursorTrail() {
       x.set(e.clientX);
       y.set(e.clientY);
       setActive(true);
+      if (waitingForMove.current) {
+        waitingForMove.current = false;
+        setDotHidden(false);
+      }
     };
     const handleLeave = () => setActive(false);
 
@@ -71,8 +123,39 @@ export function CursorTrail() {
       />
       <motion.span
         className="absolute size-2 rounded-full bg-coral"
-        style={{ left: springX, top: springY, translateX: "-50%", translateY: "-50%" }}
+        style={{
+          left: springX,
+          top: springY,
+          translateX: "-50%",
+          translateY: "-50%",
+          opacity: dotHidden ? 0 : 1,
+        }}
       />
+      <AnimatePresence>
+        {bursts.map((burst) => (
+          <span
+            key={burst.id}
+            className="absolute"
+            style={{ left: burst.x, top: burst.y }}
+          >
+            {burst.pieces.map((piece, i) => (
+              <motion.span
+                key={i}
+                className="absolute size-1.5 rounded-full bg-coral"
+                initial={{ x: 0, y: 0, opacity: 1, scale: 1 }}
+                animate={{
+                  x: piece.dx,
+                  y: piece.dy,
+                  opacity: 0,
+                  scale: 0.4,
+                  rotate: piece.rotate,
+                }}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+              />
+            ))}
+          </span>
+        ))}
+      </AnimatePresence>
     </div>
   );
 }
