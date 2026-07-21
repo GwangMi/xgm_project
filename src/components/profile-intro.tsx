@@ -1,14 +1,29 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { AnimatedSection, AnimatedItem } from "@/components/animated-section";
+import { IconMail, IconGithub, IconLinkedin, IconDownload } from "@/components/icons";
+import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/contact-info";
 
 export function ProfileIntro() {
   const t = useTranslations("profile");
+  const locale = useLocale();
+
+  const links = [
+    { icon: <IconMail />, label: t("links.email"), href: `mailto:${EMAIL}` },
+    { icon: <IconGithub />, label: "GitHub", href: GITHUB_URL, external: true },
+    { icon: <IconLinkedin />, label: "LinkedIn", href: LINKEDIN_URL, external: true },
+    {
+      icon: <IconDownload />,
+      label: t("links.resume"),
+      href: `/resume/resume-${locale}.pdf`,
+      download: true,
+    },
+  ];
 
   return (
     <AnimatedSection className="mx-auto max-w-6xl px-6 py-20">
-      <AnimatedItem className="flex flex-col items-start gap-10 sm:flex-row sm:items-center">
+      <AnimatedItem className="flex flex-col items-start gap-8 sm:flex-row sm:items-center">
         <div className="relative shrink-0">
           <div className="brutal-shadow size-40 overflow-hidden border-2 border-ink sm:size-48">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -22,14 +37,29 @@ export function ProfileIntro() {
             {t("tag")}
           </span>
         </div>
-        <div className="border-2 border-ink bg-card p-6 sm:p-8">
-          <p className="font-display text-xl text-ink sm:text-2xl">
-            {t("lead")}
-          </p>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
-            {t("body")}
-          </p>
+        <div className="flex flex-col gap-3">
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer noopener" : undefined}
+              download={link.download || undefined}
+              className="brutal-shadow-sm flex items-center gap-3 border-2 border-ink bg-ink px-5 py-2.5 text-sm font-bold tracking-wide text-paper uppercase transition-colors hover:bg-teal hover:text-ink"
+            >
+              {link.icon}
+              {link.label}
+            </a>
+          ))}
         </div>
+      </AnimatedItem>
+      <AnimatedItem className="mt-10 border-2 border-ink bg-card p-6 sm:p-8">
+        <p className="font-display text-xl text-ink sm:text-2xl">
+          {t("lead")}
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-muted">
+          {t("body")}
+        </p>
       </AnimatedItem>
     </AnimatedSection>
   );

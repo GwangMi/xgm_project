@@ -23,8 +23,12 @@
   },
   "profile": {
     "tag": "HUMAN API",
-    "lead": "Someone who finds joy in the process, not just the goal",
-    "body": "When problems come up, I stay calm and look for a way forward instead of panicking. I take deadlines seriously once we've agreed on them, and I'm never afraid to ask when I don't know something — learning is part of the job. Making a positive impact, on the team and beyond, is what motivates me most."
+    "lead": "Someone who thinks through to where people actually use it",
+    "body": "I care more about how a technology reaches people than about the technology itself. That's the thread running from my early work with data on people with mobility challenges, through vocational rehabilitation and policy research, to data analysis, AI, and backend development — all in pursuit of solutions that reach more people. I put more value in the change a technology can create than in simply learning it.",
+    "links": {
+      "email": "Email",
+      "resume": "Resume"
+    }
   },
   "about": {
     "heading": "About",

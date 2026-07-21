@@ -3,52 +3,16 @@
 import { useTranslations } from "next-intl";
 import { AnimatedSection, AnimatedItem } from "@/components/animated-section";
 import { SectionHeading } from "@/components/section-heading";
-
-const EMAIL = "wjsrhkdals97@gmail.com";
-const LINKEDIN_URL = "https://www.linkedin.com/in/gm97";
-const GITHUB_URL = "https://github.com/GwangMi";
-
-function IconMail() {
-  return (
-    <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2">
-      <rect x="3" y="5" width="18" height="14" rx="1" />
-      <path d="m3 6 9 7 9-7" />
-    </svg>
-  );
-}
-
-function IconLink() {
-  return (
-    <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M9 15 15 9M10 6l1.5-1.5a4 4 0 0 1 5.7 5.7L15.5 12M14 18l-1.5 1.5a4 4 0 0 1-5.7-5.7L8.5 12" />
-    </svg>
-  );
-}
-
-function IconCode() {
-  return (
-    <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="m8 8-4 4 4 4M16 8l4 4-4 4" />
-    </svg>
-  );
-}
-
-function IconPin() {
-  return (
-    <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z" />
-      <circle cx="12" cy="10" r="2.5" />
-    </svg>
-  );
-}
+import { IconMail, IconLinkedin, IconGithub, IconPin } from "@/components/icons";
+import { EMAIL, LINKEDIN_URL, GITHUB_URL } from "@/lib/contact-info";
 
 export function Contact() {
   const t = useTranslations("contact");
 
   const rows = [
     { icon: <IconMail />, label: t("emailLabel"), value: EMAIL, href: `mailto:${EMAIL}` },
-    { icon: <IconLink />, label: t("linkedinLabel"), value: "linkedin.com/in/gm97", href: LINKEDIN_URL },
-    { icon: <IconCode />, label: t("githubLabel"), value: "github.com/GwangMi", href: GITHUB_URL },
+    { icon: <IconLinkedin />, label: t("linkedinLabel"), value: "linkedin.com/in/gm97", href: LINKEDIN_URL },
+    { icon: <IconGithub />, label: t("githubLabel"), value: "github.com/GwangMi", href: GITHUB_URL },
     { icon: <IconPin />, label: t("locationLabel"), value: t("location"), href: null },
   ];
 
