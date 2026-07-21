@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import en from "../../../../messages/en.json";
 import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/contact-info";
 
-const MODEL = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+const MODEL = process.env.GEMINI_MODEL || "gemini-flash-latest";
 const MAX_HISTORY = 12;
 const MAX_MESSAGE_LENGTH = 800;
 
@@ -84,7 +84,11 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify({
           systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
           contents,
-          generationConfig: { maxOutputTokens: 400, temperature: 0.6 },
+          generationConfig: {
+            maxOutputTokens: 400,
+            temperature: 0.6,
+            thinkingConfig: { thinkingBudget: 0 },
+          },
         }),
       },
     );
