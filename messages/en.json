@@ -28,7 +28,7 @@
   },
   "about": {
     "heading": "About",
-    "intro": "I've grown beyond simply collecting data into someone who connects data to information and services people can actually use. Over two years and seven months as a national R&D researcher, I built data from scratch in areas where none existed, analyzed it, and turned it into information used for real decisions. I later expanded from data analysis into service planning and generative AI through graduate school in AI and the Microsoft AI School program.",
+    "intro": "I've grown from someone who simply collects data into someone who turns it into information and services people can actually use. Over two years and seven months as a national R&D researcher, I built data from scratch in places where none existed, analyzed it, and turned it into information that shaped real decisions. I later expanded beyond data analysis into service planning and generative AI, through graduate school and the Microsoft AI School program.",
     "highlights": [
       {
         "title": "Building the evidence for decisions where no data existed",
@@ -43,7 +43,7 @@
         "body": "In the NOTO project, I used Azure Document Intelligence and GPT-4o Vision to automatically extract and structure receipt data, reducing manual input for users. In a school-zone child accident risk prediction project, I focused not just on predictive accuracy but on making results understandable and actionable through a Streamlit dashboard. I believe AI's role isn't the technology itself but making users' information discovery and decisions more efficient, and I continue to study advances in LLM technology."
       }
     ],
-    "closing": "Building on my experience of creating information where none existed and connecting it to real decisions, I want to grow into a planner who turns data into services that change how people judge and act."
+    "closing": "Drawing on this experience of creating information where none existed and turning it into real decisions, I want to grow into a planner who builds data into services that change how people judge and act."
   },
   "experience": [
     {
@@ -70,7 +70,7 @@
           ]
         }
       ],
-      "footnote": "Produced research outcomes including academic paper publications and reports for participating research projects"
+      "footnote": "Delivered research outcomes for each project, including published papers and reports"
     }
   ],
   "projects": [
@@ -92,7 +92,7 @@
       "subtitle": "Microsoft AI School Team Project (1st)",
       "tags": ["Python", "Logistic Regression", "SMOTE", "Streamlit", "Folium", "QGIS"],
       "bullets": [
-        "Proposed the initial idea (an infrastructure-data-based child-friendly city diagnostic service); the team refined the direction into accident risk prediction",
+        "Proposed the original concept — a diagnostic service for child-friendly cities based on infrastructure data — which the team refined into accident-risk prediction",
         "Built a prediction model combining safety facility and accident data from 142 school zones in Seongnam and Gwangmyeong with roughly 4,000 road-view images",
         "Owned modeling and validation using Logistic Regression (L1/Lasso, SMOTE, OOF cross-validation)",
         "Built a Streamlit/Folium dashboard to visualize results and a policy simulator to analyze the impact of adding facilities"
