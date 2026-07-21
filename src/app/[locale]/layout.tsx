@@ -14,6 +14,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { CursorTrail } from "@/components/cursor-trail";
 import { ClickBurst } from "@/components/click-burst";
+import { AiChat } from "@/components/ai-chat";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -85,6 +86,7 @@ export default async function LocaleLayout({
           <CursorTrail />
           <ClickBurst />
           {children}
+          <AiChat />
         </NextIntlClientProvider>
       </body>
     </html>

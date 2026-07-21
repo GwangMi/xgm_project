@@ -214,5 +214,15 @@
   },
   "footer": {
     "rights": "GwangMin Jeon. All rights reserved."
+  },
+  "chat": {
+    "label": "Ask my AI",
+    "title": "GwangMin's AI Assistant",
+    "greeting": "Hi! Ask me anything about GwangMin's experience, projects, or skills.",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "close": "Close",
+    "error": "Couldn't get a reply right now. Please try again in a moment.",
+    "limitReached": "You've reached this conversation's message limit. For anything else, feel free to email GwangMin directly."
   }
 }
