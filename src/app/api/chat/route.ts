@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import en from "../../../../messages/en.json";
 import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "@/lib/contact-info";
 
-const MODEL = process.env.GEMINI_MODEL || "gemini-flash-latest";
+const MODEL = process.env.GEMINI_MODEL || "gemini-3.1-flash-lite";
 const MAX_HISTORY = 12;
 const MAX_MESSAGE_LENGTH = 800;
 
@@ -84,11 +84,7 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify({
           systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
           contents,
-          generationConfig: {
-            maxOutputTokens: 400,
-            temperature: 0.6,
-            thinkingConfig: { thinkingBudget: 0 },
-          },
+          generationConfig: { maxOutputTokens: 400, temperature: 0.6 },
         }),
       },
     );
@@ -97,6 +93,7 @@ export async function POST(req: NextRequest) {
   }
 
   if (!upstream.ok) {
+    console.error("Gemini API error", upstream.status, await upstream.text());
     return NextResponse.json({ error: "upstream_error" }, { status: 502 });
   }
 
